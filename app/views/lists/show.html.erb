@@ -1,5 +1,7 @@
-<div class="banner-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-<%= @list.name %>
+<div class="banner-category"
+  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= if @list.photo.attached? then cl_image_path @list.photo.key, height: 300, crop: :fill end %>')"
+>
+<%= @list.name%>
 </div>
 <div class="d-flex justify-content-between m-5">
 <%= link_to 'back to list', lists_path, class: "btn btn-primary" %>
