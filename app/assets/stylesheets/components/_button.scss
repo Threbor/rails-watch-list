@@ -2,8 +2,9 @@
 .btn-primary {
   border-radius: 10px;
   margin: 10px;
-  color: white;
-  
+  --bs-link-color: white;
+  --bs-btn-hover-bg: #a3abb7;
+
 }
 
 .btn-flat {
