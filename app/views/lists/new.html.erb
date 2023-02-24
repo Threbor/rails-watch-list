@@ -1,10 +1,10 @@
 <h1>New list</h1>
 
-<%= render "form", list: @list %>
-
-<br>
-
-<div>
-  <%= link_to "Back to lists", lists_path %>
+<div class="col-5 m-auto">
+  <%= render "form", list: @list %>
 </div>
 
+
+<div class="btn btn-info">
+  <%= link_to "Back to lists", lists_path %>
+</div>
