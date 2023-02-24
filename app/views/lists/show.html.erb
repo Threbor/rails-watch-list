@@ -1,22 +1,24 @@
 <div class="banner-category"
   style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= if @list.photo.attached? then cl_image_path @list.photo.key, height: 300, crop: :fill end %>')"
 >
-<%= @list.name%>
+  <%= @list.name%>
 </div>
+
 <div class="d-flex justify-content-between m-5">
-<%= link_to 'back to list', lists_path, class: "btn btn-primary" %>
-<%= link_to 'Add Movie to my List',  new_list_path, class: "btn btn-flat" %></a>
+  <%= link_to 'back to list', lists_path, class: "btn btn-primary" %>
+  <%= link_to 'Add Movie to my List',  new_list_path, class: "btn btn-flat" %></a>
 </div>
+
 <div class="d-flex justify-content-center">
-  <div class="row">
+  <div class="row col-5">
   <%= simple_form_for([@list, @bookmark]) do |f| %>
-    <div class="form-inputs col-4">
+    <div class="form-inputs">
       <%= f.input :comment %>
       <%= f.association :movie%>
     </div>
 
-    <div class="form-actions">
-      <%= f.button :submit, class: "btn btn-flat" %>
+    <div class="form-actions d-flex justify-content-end">
+      <%= f.button :submit, class: "btn btn-info" %>
     </div>
   <% end %>
   </div>
